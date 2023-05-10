@@ -54,7 +54,8 @@ with st.echo(code_location='below'):
         atom_num, 
         cell)
     # Plot the structure
-    crystal.plot_structure(
+    st.pyplot(crystal.plot_structure(
         zone_axis_lattice=[5,3,1],
-        figsize=(4,4),
-    )
+        figsize=(4,4),)
+             )
+              
