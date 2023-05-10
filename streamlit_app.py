@@ -46,9 +46,9 @@ with st.echo(code_location='below'):
         [0.5, 0.5, 0.0],
     ]
     atom_num = st.slider("Atom number", 1, 100, 79)
-    a = st.slider("lattice parameter", 0.5, 12.0, 4.08)
-    b = st.slider("lattice parameter", 0.5, 12.0, 4.08)
-    c = st.slider("lattice parameter", 0.5, 12.0, 4.08)
+    a = st.slider("A lattice parameter", 0.5, 12.0, 4.08)
+    b = st.slider("B lattice parameter", 0.5, 12.0, 4.08)
+    c = st.slider("C lattice parameter", 0.5, 12.0, 4.08)
     cell = a,b,c
 
     crystal = py4DSTEM.process.diffraction.Crystal(
