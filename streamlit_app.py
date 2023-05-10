@@ -45,7 +45,7 @@ with st.echo(code_location='below'):
         [0.5, 0.0, 0.5],
         [0.5, 0.5, 0.0],
     ]
-    atom_num = st.slider("Atom number of turns in spiral", 1, 100, 79)
+    atom_num = st.slider("Atom number", 1, 100, 79)
     a = 4.08
     cell = a
 
