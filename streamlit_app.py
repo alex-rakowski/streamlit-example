@@ -37,3 +37,24 @@ with st.echo(code_location='below'):
     st.altair_chart(alt.Chart(pd.DataFrame(data), height=500, width=500)
         .mark_circle(color='#0068c9', opacity=0.5)
         .encode(x='x:Q', y='y:Q'))
+    
+    # Define fcc gold structure using manual input of the crystal structure
+    pos = [
+        [0.0, 0.0, 0.0],
+        [0.0, 0.5, 0.5],
+        [0.5, 0.0, 0.5],
+        [0.5, 0.5, 0.0],
+    ]
+    atom_num = 79
+    a = 4.08
+    cell = a
+
+    crystal = py4DSTEM.process.diffraction.Crystal(
+        pos, 
+        atom_num, 
+        cell)
+    # Plot the structure
+    crystal.plot_structure(
+        zone_axis_lattice=[5,3,1],
+        figsize=(4,4),
+    )
