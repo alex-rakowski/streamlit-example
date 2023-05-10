@@ -61,4 +61,15 @@ with st.echo(code_location='below'):
         figsize=(4,4),
     returnfig=True)
     st.pyplot(fig)
-              
+    
+    # Calculate and plot the structure factors
+
+    k_max = st.slider(0.5, 10.0, 2.0)  # This is the maximum scattering vector included in the following calculations
+    # k_max = 6.0
+
+    crystal.calculate_structure_factors(k_max)
+
+    struc_fig, _ = crystal.plot_structure_factors(
+        zone_axis_lattice=[3,2,1], returnfig=True)
+    st.pyplot(struc_fig)
+    
