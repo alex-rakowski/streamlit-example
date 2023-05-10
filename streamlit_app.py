@@ -57,6 +57,6 @@ with st.echo(code_location='below'):
     fig=crystal.plot_structure(
         zone_axis_lattice=[5,3,1],
         figsize=(4,4),
-    return_fig=True)
+    returnfig=True)
     st.pyplot(fig)
               
